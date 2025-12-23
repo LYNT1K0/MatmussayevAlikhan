@@ -1,13 +1,27 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-void main() {
-    //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-    // to see how IntelliJ IDEA suggests fixing it.
-    IO.println(String.format("Hello andelcome!"));
+public class Main {
+    public static void main(String[] args) {
 
-    for (int i = 1; i <= 5; i++) {
-        //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-        // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-        IO.println("i = " + i);
+        System.out.println("=== Vet Clinic ===");
+
+        Pet pet = new Pet("Шарик", "Dog", 3, "Влад");
+        Owner owner = new Owner("Влад", "87001234567", 1, "Astana");
+        Vet vet = new Vet("Максим", 2, "HappyPets", 30);
+
+        System.out.println(pet);
+        System.out.println(owner);
+        System.out.println(vet);
+
+        pet.grow();
+        owner.addPet();
+        vet.work();
+
+        System.out.println("\nAfter changes:");
+        System.out.println(pet);
+        System.out.println(owner);
+        System.out.println(vet);
+
+        System.out.println("Pet old: " + pet.isOld());
+        System.out.println("Owner has pets: " + owner.hasPets());
+        System.out.println("Vet experienced: " + vet.isExperienced());
     }
 }
