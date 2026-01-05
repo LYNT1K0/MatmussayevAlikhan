@@ -13,8 +13,8 @@ public class Main {
 
         pet.grow();
         owner.addPet();
+        vet.age();
         vet.work();
-
         System.out.println("\nAfter changes:");
         System.out.println(pet);
         System.out.println(owner);
@@ -23,5 +23,6 @@ public class Main {
         System.out.println("Pet old: " + pet.isOld());
         System.out.println("Owner has pets: " + owner.hasPets());
         System.out.println("Vet experienced: " + vet.isExperienced());
+        System.out.println("Happy Birthday: " + vet.isAge());
     }
 }

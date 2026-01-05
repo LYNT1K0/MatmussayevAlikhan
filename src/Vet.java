@@ -51,6 +51,14 @@ public class Vet {
         return experience >= 3;
     }
 
+    public void age() {
+        age = age + 1;
+    }
+
+    public int isAge() {
+        return age;
+    }
+
     @Override
     public String toString() {
         return "Vet{" +
