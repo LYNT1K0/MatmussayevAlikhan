@@ -16,7 +16,8 @@ public class Pet {
     }
 
     public void setName(String name) {
-        this.name = name;
+        if(name != null && !name.trim().isEmpty()) this.name = name;
+        else System.out.println("Invalid pet name!");
     }
 
     public String getType() {
@@ -24,7 +25,8 @@ public class Pet {
     }
 
     public void setType(String type) {
-        this.type = type;
+        if(type != null && !type.trim().isEmpty()) this.type = type;
+        else System.out.println("Invalid type!");
     }
 
     public int getAge() {
@@ -32,7 +34,8 @@ public class Pet {
     }
 
     public void setAge(int age) {
-        this.age = age;
+        if(age >= 0) this.age = age;
+        else System.out.println("Age cannot be negative!");
     }
 
     public String getOwner() {
@@ -40,7 +43,8 @@ public class Pet {
     }
 
     public void setOwner(String owner) {
-        this.owner = owner;
+        if(owner != null && !owner.trim().isEmpty()) this.owner = owner;
+        else System.out.println("Invalid owner!");
     }
 
     public void grow() {

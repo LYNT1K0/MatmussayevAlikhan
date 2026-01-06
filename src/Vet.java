@@ -16,7 +16,8 @@ public class Vet {
     }
 
     public void setName(String name) {
-        this.name = name;
+        if(name != null && !name.trim().isEmpty()) this.name = name;
+        else System.out.println("Invalid vet name!");
     }
 
     public int getExperience() {
@@ -24,7 +25,8 @@ public class Vet {
     }
 
     public void setExperience(int experience) {
-        this.experience = experience;
+        if(experience >= 0) this.experience = experience;
+        else System.out.println("Experience cannot be negative!");
     }
 
     public String getClinic() {
@@ -32,7 +34,8 @@ public class Vet {
     }
 
     public void setClinic(String clinic) {
-        this.clinic = clinic;
+        if(clinic != null && !clinic.trim().isEmpty()) this.clinic = clinic;
+        else System.out.println("Invalid clinic!");
     }
 
     public int getAge() {
@@ -40,7 +43,8 @@ public class Vet {
     }
 
     public void setAge(int age) {
-        this.age = age;
+        if(age >= 18) this.age = age;
+        else System.out.println("Vet must be at least 18!");
     }
 
     public void work() {

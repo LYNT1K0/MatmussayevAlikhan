@@ -16,7 +16,8 @@ public class Owner {
     }
 
     public void setName(String name){
-        this.name = name;
+        if(name != null && !name.trim().isEmpty()) this.name = name;
+        else System.out.println("Invalid name!");
     }
 
     public String getPhone(){
@@ -24,7 +25,8 @@ public class Owner {
     }
 
     public void setPhone(String phone){
-        this.phone = phone;
+        if(phone != null && phone.matches("\\d{10,12}")) this.phone = phone;
+        else System.out.println("Invalid phone!");
     }
 
     public int getPets(){
@@ -32,7 +34,8 @@ public class Owner {
     }
 
     public void setPets(int pets){
-        this.pets = pets;
+        if(pets >= 0) this.pets = pets;
+        else System.out.println("Pets cannot be negative!");
     }
 
     public String getCity(){
@@ -40,7 +43,8 @@ public class Owner {
     }
 
     public void setCity(String city){
-        this.city = city;
+        if(city != null && !city.trim().isEmpty()) this.city = city;
+        else System.out.println("Invalid city!");
     }
 
     public void addPet() {
